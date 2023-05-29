@@ -1,4 +1,4 @@
-function x = noise(a, N)
+function [x, A] = noise(a, N)
 
 % Parameters
 % a : [-a, a] interval
@@ -10,6 +10,6 @@ if a < 0
 elseif a == 0
     error("Do NOT set a as zero!!");
 end
-
+A = a;
 x = -a+rand(N,1).*(2*a);
 end

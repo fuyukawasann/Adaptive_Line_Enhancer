@@ -3,7 +3,7 @@ function sw = sinusoidal(A, omega, N)
 % Parameter
 % A : Amplitude
 % omega : freq.
-% n : input variable
+% N : input variable
 
 if (0 < omega) && (omega < pi)
 else
