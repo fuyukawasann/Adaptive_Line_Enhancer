@@ -1,8 +1,8 @@
-function x = noise(a, n)
+function x = noise(a, N)
 
 % Parameters
 % a : [-a, a] interval
-% n : number of Points
+% N : number of Points
 % x : noise signal
 
 if a < 0
@@ -11,5 +11,5 @@ elseif a == 0
     error("Do NOT set a as zero!!");
 end
 
-x = -a+rand(n,1).*(2*a);
+x = -a+rand(N,1).*(2*a);
 end
