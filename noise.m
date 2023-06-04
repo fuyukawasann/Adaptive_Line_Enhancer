@@ -1,15 +1,19 @@
-function [x, A] = noise(a, N)
+function w = noise(a, M)
 
-% Parameters
-% a : [-a, a] interval
-% N : number of Points
-% x : noise signal
+if (M < 0)
+    M = -M;
+elseif (M == 0)
+    error("M must have positive integer");
+end
 
-if a < 0
-    a = -1*a;
-elseif a == 0
-    error("Do NOT set a as zero!!");
+% Make a White Noise that has uniformly distributed
+w = -a+2*a*rand(1,M);
+
+% Plotting NOISE for test
+%plot(w);
+
 end
-A = a;
-x = -a+rand(N,1).*(2*a);
-end
+
+%y = rand(1,n);      % Generate white noise
+%[b,a] = butter(6,fc/(fs/2));     % Bandpass filter design
+%y_filt = filter(b,a,y);    % Filter white noise

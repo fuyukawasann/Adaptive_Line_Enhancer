@@ -1,23 +1,26 @@
-function [h, y] = lms(x, d, delta, N)
+function [h,sh] = lms(x, delta, N)
 
-% LMS Algorithm for Coefficient Adjustment
-% 
-% == OUTPUT Parameters ==
-% h : adaptive filter coefficients
-% y : output
-%
-% == INPUT Parameters ==
-% x : input sequence
-% d : desired sequence
-% delta : step size
-% N : desired length of the adaptive FIR Filter
+% Parameters
+% sh : s hat
+% x : s + w
+% delta
+% N : Sampled number of filter
 
-M = length(x); y = zeros(1, M);
+% make delayed input signal at once
+nx = [0, x(1,1:length(x)-1)];
+%disp(nx);
+
+M = length(nx); sh = zeros(1,M);
+h = zeros(1,N);
+%disp(M);
+%disp(N);
+
 for n = N:M
-    x1 = x(n:-1:n-N+1);
-    y = h * x1';
-    e = d(n) - y;
-    h = h + delta*e*x1;
+    % disp(n);
+    nx1 = nx(n:-1:n-N+1);
+    sh = h * nx1';
+    e = x(n)-sh;
+    h = h + delta*e*nx1;
+    % disp(sh);
 end
-
 end
