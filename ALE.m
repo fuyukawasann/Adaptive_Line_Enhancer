@@ -1,38 +1,43 @@
-function ale = ALE(A, omega, N, a, delta, M)
-
-%% Parameter
-% A : Amplitude of sine wave
-% omega : freq. of sine wave
-% N : number of points
-% a : max. value of noise's interval
-% delta : step size
-% M : desired length of the adaptive FIR Fiter
+function ale = ALE(a, M, A, w0, delta, N)
 
 %% Noise
 % a1 is modified a (neg -> pos)
-[w, a1] = noise(a, N);
+[w, nM] = noise(a, M);
 
 %% Sinusoidal
-sw = sinusoidal(A, omega, N);
+s = sinewave(A, nM, w0);
 
 %% Input Signal
-x = w + sw;
+x = inputwave(s,w);
 
 %% Filtered Input
-s = lms1(a1, x, delta, M);
+[h, sha] = LMS(x, delta, N);
 
 %% OUTPUT
-ale = x - s;
+ale = x - sha;
 
 %% Plot
-subplot(1,4,1);
-plot(1:N, ale);
-subplot(1,4,2);
-plot(1:N,ale-w);
-subplot(1,4,3);
-plot(1:N,w);
-subplot(1,4,4);
-plot(1:N,ale-sw-w);
+figure(1)
+subplot(3,2,1)
+plot(1:M, ale)
+title('ALE')
 
+subplot(3,2,2)
+plot(1:M, ale-w)
+title('ALE-noise')
 
+subplot(3,2,3)
+plot(1:M,w)
+title('noise')
 
+subplot(3,2,4)
+plot(1:M,ale-s-w)
+title('ALE-sinewave-noise')
+
+subplot(3,2,5);
+plot(1:M,s);
+title('Sinewave')
+
+subplot(3,2,6);
+plot(1:M,sha);
+title('S of hat')

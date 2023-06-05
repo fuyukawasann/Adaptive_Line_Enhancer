@@ -1,4 +1,4 @@
-function w = noise(a, M)
+function [w, nM] = noise(a, M)
 
 if (M < 0)
     M = -M;
@@ -8,6 +8,7 @@ end
 
 % Make a White Noise that has uniformly distributed
 w = -a+2*a*rand(1,M);
+nM = M;
 
 % Plotting NOISE for test
 %plot(w);
