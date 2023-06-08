@@ -1,4 +1,4 @@
-function ale = ALE(a, M, A, w0, delta, N)
+function [ale, sha] = ALE(a, M, A, w0, delta, N)
 
 %% Noise
 % a1 is modified a (neg -> pos)
