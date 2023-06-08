@@ -17,27 +17,27 @@ x = inputwave(s,w);
 ale = x - sha;
 
 %% Plot
-figure(1)
-subplot(3,2,1)
-plot(1:M, ale)
-title('ALE')
-
-subplot(3,2,2)
-plot(1:M, ale-w)
-title('ALE-noise')
-
-subplot(3,2,3)
-plot(1:M,w)
-title('noise')
-
-subplot(3,2,4)
-plot(1:M,ale-s-w)
-title('ALE-sinewave-noise')
-
-subplot(3,2,5);
-plot(1:M,s);
-title('Sinewave')
-
-subplot(3,2,6);
-plot(1:M,sha);
-title('S of hat')
+% figure(1)
+% subplot(3,2,1)
+% plot(1:M, ale)
+% title('ALE')
+% 
+% subplot(3,2,2)
+% plot(1:M, ale-w)
+% title('ALE-noise')
+% 
+% subplot(3,2,3)
+% plot(1:M,w)
+% title('noise')
+% 
+% subplot(3,2,4)
+% plot(1:M,ale-s-w)
+% title('ALE-sinewave-noise')
+% 
+% subplot(3,2,5);
+% plot(1:M,s);
+% title('Sinewave')
+% 
+% subplot(3,2,6);
+% plot(1:M,sha);
+% title('S of hat')

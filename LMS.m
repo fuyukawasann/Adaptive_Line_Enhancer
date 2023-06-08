@@ -15,7 +15,7 @@ h = zeros(1,N);
 %disp(M);
 %disp(N);
 
-sha = [0 0 0 0 0 0 0 0 0];
+sha = zeros(1,N-1);
 
 for n = N:M
     % disp(n);
