@@ -93,8 +93,12 @@ Fig. 2~6 is the result of the discussion in III. As follow, this paper shows onl
 When sending and receiving voice files, it makes noise, inevitably. Audio file which has noise shows a clear noise reduction when they through the filter. Since amplitude of noise is greater than amplitude of signal, which was an important condition in this experiment, the output always sounded louder than the original speech file at any given moment. If the difference between the two amplitudes was too large, the noise would bury the original voice file and make it inaudible, and if the difference between the two amplitudes was too small, the original voice would also become smaller, making it harder to hear. This confirms that the LMS filter did its job and that ALE is working properly.
 
 ## Reference
-[1]	J. L. Flanagan, J. D.Johnston, R. Zahn and G . W. Elko, “Com- puter-steered microphone arrays for sound transaction in large rooms,”J.Acoust. Soc. Am., 78, pp. 1508-1518,Nov. 1985. 
+[1]	J. L. Flanagan, J. D.Johnston, R. Zahn and G . W. Elko, “Com- puter-steered microphone arrays for sound transaction in large rooms,”J.Acoust. Soc. Am., 78, pp. 1508-1518,Nov. 1985.
+
 [2]	S. F. Boll, “Suppression of acoustic noise in speech using spec- tral subtraction,”IEEE Trans. Acoust.. Speech, Signal Process- ing, vol. ASSP-27, no. 2, pp.113-120, April 1979.
+
 [3]	“How to generate noise signal with desired max and min signal?” Mathworks.https://kr.mathworks.com/matlabcentral/answers/1753630-how-to-generate-noise-signal-with-desired-max-and-min-signal (June 8th, 2023).
+
 [4]	K. Sumi, N. Sasaoka, Y. Itoh and K. Fujii, “Smart noise reduction method for sinusoidal and wideband noise using adaptive line enhancer and noise reconstruction filter”The 2004 47th, Midwest Symposium on Circuits and Systems, 2004, Nov. 2004.
+
 [5]	V. K. Ingle and J. G. Proakis, Digital Signal Processing using MATLAB, 3rd, ed. Stamford, CT :Cengage Learning, 2010.
