@@ -2,7 +2,7 @@
 Project file for Adaptive Line Enhancement using MATLAB
 
 ## Authors
-Hanbyeol Lee, Convergence of Electrocnic Engineering, Hanyang University
+Hanbyeol Lee, Convergence of Electrocnic Engineering, Hanyang University <br>
 Jiyoung Ok, Convergence of Electronic Engineering, Hanyang University
 
 ## Abstract
